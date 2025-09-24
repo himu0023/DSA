@@ -1,16 +1,15 @@
-def sub_array(arr):
-    n = len(arr)
+def sub_arr(nums):
+  n = len(nums)
+  result = []
 
-    # Pick starting point
-    for i in range(n):
-        # Pick ending point
-        for j in range(i, n):
-            # Print subarray between current starting and ending points
-            for k in range(i, j + 1):
-                print(arr[k], end=" ")
-            print()  # New line after each subarray
+  for i in range(n):
+    for j in range(i, n):
+      subarray = []
+      for k in range(i, j+1):
+        subarray.append(nums[k])
+      result.append(subarray)
+    print(subarray)
+  return result
 
-# Driver code
-arr = [1, 2, 3, 4]
-print("All Non-empty Subarrays:")
-sub_array(arr)
+arr=[1,2,3,4]
+sub_arr(arr)

@@ -11,6 +11,6 @@ def func(nums):
     result.append(subset_sum)
   return result
 
-arr = [1,3,4,5]
+arr = [5,9,3]
 ans = func(arr)
 print(ans)
